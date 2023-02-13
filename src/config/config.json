@@ -1,0 +1,34 @@
+{
+  "server": {
+    "port": 8100,
+    "bodyLimit": "15360kb",
+    "corsHeaders": ["Link"],
+    "facilityCode": "TBD",
+    "machineID": "TBD",
+    "defaultDest": {
+      "outOfScheme": "1",
+      "badBarcode": "20"
+    }
+  },
+  "mongodb": {
+    "host": "127.0.0.1",
+    "port": "27017",
+    "username": "dorabot",
+    "password": "dorabot",
+    "dbname": "ryderSVT"
+  },
+  "mongoConfig": {
+    "serverSelectionTimeoutMS": 1000,
+    "retryAttempts": 999,
+    "retryDelay": 1000
+  },
+  "svt": {
+    "baseUrl": "https://127.0.0.1:8200",
+    "api": {
+      "sortInstructions": "/sort_instructions",
+      "sortUpdates": "/sort_updates"
+    }
+  },
+  "MAX_LISTENERS_COUNT": 20,
+  "logName": "ryderSVT"
+}
