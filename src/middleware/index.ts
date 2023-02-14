@@ -10,10 +10,11 @@ import { IServerConfig } from 'config/config';
 
 const config = new ConfigService(configuration);
 const logName = config.get<string>('logName');
+const { bodyLimit, corsHeaders } = config.get<IServerConfig>('server');
+
 const Logger = new WinstonLoggerService({
   logName: logName,
 } as LogOptions);
-const { bodyLimit, corsHeaders } = config.get<IServerConfig>('server');
 
 /**
  * A application level middleware including http report and docs routes
